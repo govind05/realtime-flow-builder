@@ -17,7 +17,7 @@ export const useSocketIO = (options: Props) => {
   const name = unref(useStorage(constants.storageKeys.USERNAME, '', sessionStorage))
   const socket = ref(io(config.socketUrl, { query: { name, roomId } }))
 
-  const mousePos = reactive(useMouse({ eventFilter: throttleFilter(200), touch: false }))
+  const mousePos = reactive(useMouse({ eventFilter: throttleFilter(100), touch: false }))
 
   watch(mousePos, () => {
     socket.value.emit(constants.socketEvents.MOUSE_POS_UPDATE, mousePos)
