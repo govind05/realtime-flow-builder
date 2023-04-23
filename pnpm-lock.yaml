@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@vue-flow/background':
+    specifier: ^1.2.0
+    version: 1.2.0(@vue-flow/core@1.19.0)
   '@vue-flow/core':
     specifier: ^1.19.0
     version: 1.19.0(vue@3.2.47)
@@ -877,6 +880,14 @@ packages:
       '@volar/vue-language-core': 1.4.4
       typescript: 4.8.4
     dev: true
+
+  /@vue-flow/background@1.2.0(@vue-flow/core@1.19.0):
+    resolution: {integrity: sha512-ZqmYhOM/0aRmA5dA3KSHJNYpHnhmG2e6tzjmttoibo4JBI3KNbdyOX+OTlqt7Ic0LYUC6NWzRLAwv4gjJuc6Mg==}
+    peerDependencies:
+      '@vue-flow/core': ^1.12.2
+    dependencies:
+      '@vue-flow/core': 1.19.0(vue@3.2.47)
+    dev: false
 
   /@vue-flow/core@1.19.0(vue@3.2.47):
     resolution: {integrity: sha512-fEMF0FqG2JkrP8eIL/yUPMlrGrmJySUWl9hk7ZJ+9DdmE24dJRxYeKm90VIY2Q9eblFb4uI3UA3kiCtpozptoA==}
