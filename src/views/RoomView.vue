@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>Welcome to room {{ $route.params.id }}!</h1>
-    <h3>All connected</h3>
+    <span text-xl>
+      People connected:
+      <span class="text-green-500">{{ users.length + 1 }} </span>
+    </span>
+
     <FloatingLabel v-for="user of users" :key="user.id" :user="user" />
   </div>
 </template>
