@@ -2,13 +2,12 @@
   <div>
     <h1>Welcome to room {{ $route.params.id }}!</h1>
     <h3>All connected</h3>
-    <ul v-for="user in users" :key="user.id">
-      <li>{{ user.name }}: x:{{ user.mousePos?.x }}, y:{{ user.mousePos?.y }}</li>
-    </ul>
+    <FloatingLabel v-for="user of users" :key="user.id" :user="user" />
   </div>
 </template>
 
 <script setup lang="ts">
+import FloatingLabel from '@/components/FloatingLabel.vue'
 import type { SocketUserData } from '@/interface/socketUserData'
 import { useSocketIO } from '@/utils/socket'
 import { computed, ref, unref } from 'vue'
