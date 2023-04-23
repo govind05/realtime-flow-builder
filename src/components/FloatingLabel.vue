@@ -1,9 +1,9 @@
 <template>
   <div
-    class="absolute transition-all flex items-center justify-center flex-wrap animate-fade-in"
+    class="absolute transition-all flex items-center justify-center flex-wrap animate-fade-in z-40"
     :style="{
-      top: user.mousePos.y + 'px',
-      left: user.mousePos.x + 'px'
+      top: user.mousePos.y - 14 + 'px',
+      left: user.mousePos.x - 14 + 'px'
     }"
   >
     <div class="i-mdi-mouse h-6 w-6" :style="{ color: style.background }" />
